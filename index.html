@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F8 Shop</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/grid.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
-<body>
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.43/polyfill.min.js" integrity="sha512-lvWiOP+aMKHllm4THsjzNleVuGOh0WGniJ3lgu/nvCbex1LlaQSxySUjAu/LTJw9FhnSL/PVYoQcckg1Q03+fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <![endif]-->
+    <body>
     <div class="main">
 
-        <header id="header">
-            <div class="grid">
-                <nav class="header__navbar">
+        <header class="header">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="navbar__list">
                         <li class="navbar__item navbar__item-has-qrcode navbar__seperate">
                             <a href="" class="navbar__link">
@@ -121,7 +126,11 @@
                 </nav>
 
                 <div class="header__search">
-                    <div class="search__logo">
+                    <label for="mobile__searchbar-checkbox" class="mobile__searchbar">
+                        <i class="mobile__searchbar-icon fas fa-search"></i>
+                    </label>
+
+                    <div class="search__logo hide-on-tablet">
                         <a href="/" class="search__logo-link">
                             <svg viewBox="0 0 192 65" class="search__logo-img">
                                 <g fill-rule="evenodd">
@@ -133,7 +142,9 @@
                         </a>
                     </div>
 
-                    <div class="search__searchbar">
+                    <input type="checkbox" class="mobile__searchbar-checkbox" id="mobile__searchbar-checkbox">
+
+                    <div class="search__searchbar hide-on-mobile">
                         <div class="search__searchbar-wrapper">
 
                             <input type="text" class="search__searchbar-input" placeholder="Tìm kiếm sản phẩm">
@@ -246,67 +257,6 @@
                                             </div>
                                         </div>
                                     </li>
-
-                                    <li class="search__cart-item">
-                                        <img src="https://cf.shopee.vn/file/15c99b08780245f72e29ac3ea792a04d_tn" alt="" class="search__cart-item-img">
-                                        <div class="search__cart-info">
-
-                                            <div class="search__cart-info-header">
-                                                <h4 class="search__cart-name">Bảng phấn mắt 40 màu</h4>
-                                                <div class="search__cart-price-wrapper">
-                                                    <span class="search__cart-price">100.000đ</span>
-                                                    <span class="search__cart-multiply">x</span>
-                                                    <span class="search__cart-quantity">2</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="search__cart-info-body">
-                                                <span class="search__cart-descript">Phân loại: 4</span>
-                                                <span class="search__cart-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="search__cart-item">
-                                        <img src="https://cf.shopee.vn/file/15c99b08780245f72e29ac3ea792a04d_tn" alt="" class="search__cart-item-img">
-                                        <div class="search__cart-info">
-
-                                            <div class="search__cart-info-header">
-                                                <h4 class="search__cart-name">Bảng phấn mắt 40 màu</h4>
-                                                <div class="search__cart-price-wrapper">
-                                                    <span class="search__cart-price">100.000đ</span>
-                                                    <span class="search__cart-multiply">x</span>
-                                                    <span class="search__cart-quantity">2</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="search__cart-info-body">
-                                                <span class="search__cart-descript">Phân loại: 4</span>
-                                                <span class="search__cart-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="search__cart-item">
-                                        <img src="https://cf.shopee.vn/file/15c99b08780245f72e29ac3ea792a04d_tn" alt="" class="search__cart-item-img">
-                                        <div class="search__cart-info">
-
-                                            <div class="search__cart-info-header">
-                                                <h4 class="search__cart-name">Bảng phấn mắt 40 màu</h4>
-                                                <div class="search__cart-price-wrapper">
-                                                    <span class="search__cart-price">100.000đ</span>
-                                                    <span class="search__cart-multiply">x</span>
-                                                    <span class="search__cart-quantity">2</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="search__cart-info-body">
-                                                <span class="search__cart-descript">Phân loại: 4</span>
-                                                <span class="search__cart-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
                                 </ul>
 
                                 <a href="" class="search__cart-view btn btn--primary">Xem giỏ hàng</a>
@@ -315,6 +265,21 @@
                     </div>
                 </div>
             </div>
+
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link header__sort-link--active">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
         </header>
 
         <div class="modal">
@@ -410,10 +375,10 @@
             </div>
         </div>
 
-        <div id="app__container">
-            <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid__col-2">
+        <div class="app__container">
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category__header">Danh mục</h3>
                             <ul class="category__list">
@@ -433,8 +398,8 @@
                         </nav>
                     </div>
 
-                    <div class="grid__col-10">
-                        <div class="home-filter">
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
                             <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -470,9 +435,41 @@
                             </div>
                         </div>
 
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ và Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ và Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ và Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ và Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ và Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ và Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ và Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ và Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ và Thiết bị tiện ích</a>
+                                </li>
+                            </ul>
+                        </nav>
+
                         <div class="home-products">
-                            <div class="grid__row">
-                                <div class="grid__col-2-4">
+                            <div class="row sm-gutter">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="product-item">
                                         <div class="product-item__img" style="background-image: url('https://cf.shopee.vn/file/c32cb1dc3bfe4298ede2805a742b02ad_tn');"></div>
                                         <h4 class="product-item__name">Bảng phấn mắt một màu tông nhũ kim tuyến</h4>
@@ -515,7 +512,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="product-item">
                                         <div class="product-item__img" style="background-image: url('https://cf.shopee.vn/file/c32cb1dc3bfe4298ede2805a742b02ad_tn');"></div>
                                         <h4 class="product-item__name">Bảng phấn mắt một màu tông nhũ kim tuyến</h4>
@@ -558,7 +555,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="product-item">
                                         <div class="product-item__img" style="background-image: url('https://cf.shopee.vn/file/c32cb1dc3bfe4298ede2805a742b02ad_tn');"></div>
                                         <h4 class="product-item__name">Bảng phấn mắt một màu tông nhũ kim tuyến</h4>
@@ -601,7 +598,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="product-item">
                                         <div class="product-item__img" style="background-image: url('https://cf.shopee.vn/file/c32cb1dc3bfe4298ede2805a742b02ad_tn');"></div>
                                         <h4 class="product-item__name">Bảng phấn mắt một màu tông nhũ kim tuyến</h4>
@@ -644,7 +641,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="product-item">
                                         <div class="product-item__img" style="background-image: url('https://cf.shopee.vn/file/c32cb1dc3bfe4298ede2805a742b02ad_tn');"></div>
                                         <h4 class="product-item__name">Bảng phấn mắt một màu tông nhũ kim tuyến</h4>
@@ -687,7 +684,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="product-item">
                                         <div class="product-item__img" style="background-image: url('https://cf.shopee.vn/file/c32cb1dc3bfe4298ede2805a742b02ad_tn');"></div>
                                         <h4 class="product-item__name">Bảng phấn mắt một màu tông nhũ kim tuyến</h4>
@@ -730,7 +727,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="product-item">
                                         <div class="product-item__img" style="background-image: url('https://cf.shopee.vn/file/c32cb1dc3bfe4298ede2805a742b02ad_tn');"></div>
                                         <h4 class="product-item__name">Bảng phấn mắt một màu tông nhũ kim tuyến</h4>
@@ -773,7 +770,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="product-item">
                                         <div class="product-item__img" style="background-image: url('https://cf.shopee.vn/file/c32cb1dc3bfe4298ede2805a742b02ad_tn');"></div>
                                         <h4 class="product-item__name">Bảng phấn mắt một màu tông nhũ kim tuyến</h4>
@@ -816,7 +813,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="product-item">
                                         <div class="product-item__img" style="background-image: url('https://cf.shopee.vn/file/c32cb1dc3bfe4298ede2805a742b02ad_tn');"></div>
                                         <h4 class="product-item__name">Bảng phấn mắt một màu tông nhũ kim tuyến</h4>
@@ -859,7 +856,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__col-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="product-item">
                                         <div class="product-item__img" style="background-image: url('https://cf.shopee.vn/file/c32cb1dc3bfe4298ede2805a742b02ad_tn');"></div>
                                         <h4 class="product-item__name">Bảng phấn mắt một màu tông nhũ kim tuyến</h4>
@@ -951,10 +948,10 @@
             </div>
         </div>
     
-        <footer id="footer">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__col-2-4">
+        <footer class="footer">
+            <div class="grid wide footer__content">
+                <div class="row">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer__list">
                             <li class="footer__item">
@@ -969,7 +966,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__col-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Giới thiệu</h3>
                         <ul class="footer__list">
                             <li class="footer__item">
@@ -984,7 +981,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__col-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Danh mục</h3>
                         <ul class="footer__list">
                             <li class="footer__item">
@@ -999,7 +996,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__col-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Theo dõi</h3>
                         <ul class="footer__list">
                             <li class="footer__item">
@@ -1023,7 +1020,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__col-2-4">
+                    <div class="col l-2-4 m-8 c-12">
                         <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                         <div class="footer__apps">
                             <img src="/assets/img/qr_code.png" alt="QR CODE" class="footer__qrcode-img">
@@ -1042,7 +1039,7 @@
             </div>
 
             <div class="footer__bottom">
-                <div class="grid">
+                <div class="grid wide">
                     <p class="footer__credit">© 2015 - Bản quyền thuộc về Công ty TNHH Shopee</p>
                 </div>
             </div>
